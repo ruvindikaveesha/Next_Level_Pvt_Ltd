@@ -7,6 +7,6 @@ import java.util.List;
 public interface VehicleService {
     Vehicle addVehicle(Vehicle vehicle);
     List<Vehicle> fetchAllVehicle();
-    boolean checkExistsVehicle(String regNmuber,String brand);
+    boolean checkExistsVehicle(String regNmuber, String brand);
 
 }

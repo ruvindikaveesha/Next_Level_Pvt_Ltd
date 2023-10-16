@@ -20,4 +20,14 @@ public class VehicleController {
 
     }
 
+    @GetMapping(value = "fetch_All_User")
+    public Response fetchAllVehicle(){
+        return new Response("Okay","Done",vehicleService.fetchAllVehicle());}
+
+    @GetMapping(value = "/chek")
+    public Boolean checkVehicleExists(@RequestParam String regNumber,@RequestParam String brand){
+        return vehicleService.checkExistsVehicle(regNumber,brand);
+    }
+
+
 }
