@@ -2,7 +2,7 @@ package com.ruvindi.aad.user_service.controller;
 
 import com.ruvindi.aad.user_service.Dto.LoginDto;
 import com.ruvindi.aad.user_service.entity.User;
-import com.ruvindi.aad.user_service.service.Impl.UserService;
+import com.ruvindi.aad.user_service.service.UserService;
 import com.ruvindi.aad.user_service.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.ruvindi.aad.user_service.service.Impl;
+package com.ruvindi.aad.user_service.service;
 
 import com.ruvindi.aad.user_service.entity.User;
 
@@ -15,3 +15,6 @@ public interface UserService {
 
     Boolean checkLogin(String userName,String password);
 }
+
+
+
