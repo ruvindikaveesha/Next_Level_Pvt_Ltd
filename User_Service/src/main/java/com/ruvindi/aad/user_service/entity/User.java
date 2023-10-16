@@ -17,11 +17,9 @@ public class User {
     private String name;
     private String email;
     private String address;
-    private String nicOrPassportNum;
     private String password;
     private String userName;
-    private String role;
+    private String nicOrPassportNum;
     private String proPicUrl;
-
-
+    private String role;
 }
