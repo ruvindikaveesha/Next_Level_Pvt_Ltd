@@ -9,7 +9,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Data
-public class response {
+public class Response {
     private String massage;
     private String state;
     private Object data;
