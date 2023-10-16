@@ -1,4 +1,4 @@
-package com.ruvindi.aad.vehicle_service.service.Impl;
+package com.ruvindi.aad.vehicle_service.service;
 
 import com.ruvindi.aad.vehicle_service.entity.Vehicle;
 
