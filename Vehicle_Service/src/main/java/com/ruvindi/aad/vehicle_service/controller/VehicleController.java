@@ -2,7 +2,7 @@ package com.ruvindi.aad.vehicle_service.controller;
 
 import com.ruvindi.aad.vehicle_service.entity.Vehicle;
 import com.ruvindi.aad.vehicle_service.service.VehicleService;
-import com.ruvindi.aad.vehicle_service.utill.Response;
+import com.ruvindi.aad.vehicle_service.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

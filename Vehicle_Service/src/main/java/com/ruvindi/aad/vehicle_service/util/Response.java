@@ -1,4 +1,4 @@
-package com.ruvindi.aad.vehicle_service.utill;
+package com.ruvindi.aad.vehicle_service.util;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
