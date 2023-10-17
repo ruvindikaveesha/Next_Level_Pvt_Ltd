@@ -32,5 +32,9 @@ public class TravelPackageController {
         return new Response("Okay","Deleted","null");
     }
 
+    @GetMapping(value = "/get_packages")
+    public Response fetchAllPackages(){
+        return new Response("Okay","Done",travelPackageService.fetchAllPackages());
+    }
 
 }

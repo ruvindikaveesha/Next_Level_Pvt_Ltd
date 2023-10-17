@@ -11,5 +11,7 @@ public interface TravelPackageService {
 
     void deletePackage(Integer id);
 
-    List<TravelPackage> fetchAllPackage();
+    List<TravelPackage> fetchAllPackages();
 }
+
+
