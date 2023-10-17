@@ -10,7 +10,7 @@ import lombok.ToString;
 @ToString
 @Data
 public class Response {
-    private String massage;
     private String state;
+    private String massage;
     private Object data;
 }
