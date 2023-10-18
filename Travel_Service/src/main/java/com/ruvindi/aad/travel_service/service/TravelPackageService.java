@@ -5,7 +5,7 @@ import com.ruvindi.aad.travel_service.entity.TravelPackage;
 import java.util.List;
 
 public interface TravelPackageService {
-    void addTravelPackage(TravelPackage travelPackage);
+    TravelPackage addTravelPackage(TravelPackage travelPackage);
 
     TravelPackage updateTravelPackage(TravelPackage travelPackage);
 

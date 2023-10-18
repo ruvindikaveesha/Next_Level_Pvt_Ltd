@@ -16,25 +16,24 @@ public class TravelPackageController {
 
     @PostMapping(value = "/add_package")
     public Response addTravelPackage(@RequestBody TravelPackage travelPackage){
-        travelPackageService.addTravelPackage(travelPackage);
-        return new Response("Okay","Added",null);
+        return new Response("Okay","Added",travelPackageService.addTravelPackage(travelPackage));
     }
 
     @PutMapping(value = "/update_package")
     public Response updateTravelPackage(@RequestBody TravelPackage travelPackage){
         travelPackageService.updateTravelPackage(travelPackage);
-        return new Response("Okay","Done",null);
+        return new Response("Ok","Done",travelPackageService.updateTravelPackage(travelPackage));
     }
 
     @DeleteMapping(value = "/delete_package")
     public Response deletePackage(@RequestParam Integer id){
         travelPackageService.deletePackage(id);
-        return new Response("Okay","Deleted",null);
+        return new Response("Ok","Deleted",null);
     }
 
     @GetMapping(value = "/get_packages")
     public Response fetchAllPackages(){
-        return new Response("Okay","Done",travelPackageService.fetchAllPackages());
+        return new Response("Ok","Done",travelPackageService.fetchAllPackages());
     }
 
 }

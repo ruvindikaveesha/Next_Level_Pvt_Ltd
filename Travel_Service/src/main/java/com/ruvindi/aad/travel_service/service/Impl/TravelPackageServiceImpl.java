@@ -11,30 +11,30 @@ import java.util.List;
 @Service
 public class TravelPackageServiceImpl implements TravelPackageService {
     @Autowired
-    private  TravelPackageRepo travelPackageRepo;
+    private TravelPackageRepo travelPackageRepo;
+
     @Override
-    public void addTravelPackage(TravelPackage travelPackage) {
-        if(travelPackageRepo.existsById(travelPackage.getId())){
-            travelPackageRepo.save(travelPackage);
+    public TravelPackage addTravelPackage(TravelPackage travelPackage) {
+        if (travelPackageRepo.existsByPackageCategory(travelPackage.getPackageCategory())){
+            throw new RuntimeException("Package Already Exists");
         }
-        throw new RuntimeException("PACKAGE Already Exists");
+        return travelPackageRepo.save(travelPackage);
     }
 
     @Override
     public TravelPackage updateTravelPackage(TravelPackage travelPackage) {
-        if(travelPackageRepo.existsById(travelPackage.getId())){
-            travelPackageRepo.save(travelPackage);
+        if(!travelPackageRepo.existsById(travelPackage.getId())) {
+            throw new RuntimeException("Package Not Found");
         }
-        throw new RuntimeException("PACKAGE Already Exists");
-
+        return travelPackageRepo.save(travelPackage);
     }
 
     @Override
     public void deletePackage(Integer id) {
-        if(travelPackageRepo.existsById(id)){
-          travelPackageRepo.deleteById(id);
+        if (!travelPackageRepo.existsById(id)){
+            throw new RuntimeException("Package Not Found");
         }
-        throw new RuntimeException("PACKAGE not find");
+        travelPackageRepo.deleteById(id);
 
     }
 
@@ -42,6 +42,4 @@ public class TravelPackageServiceImpl implements TravelPackageService {
     public List<TravelPackage> fetchAllPackages() {
         return travelPackageRepo.findAll();
     }
-
-
 }
