@@ -18,16 +18,17 @@ public class HotelServiceImpl implements HotelService {
         if (hotelRepo.existsByIdAndName(hotel.getId(), hotel.getName())) {
             return hotelRepo.save(hotel);
         }
+        throw new RuntimeException("Hotel Already Exists");
     }
 
 
     @Override
     public List<Hotel> fetchAllHotel() {
-        return null;
+        return hotelRepo.findAll();
     }
 
     @Override
     public boolean checkExistsHotel(Integer hotelId, String name) {
-        return false;
+        return hotelRepo.existsByIdAndName(hotelId,name);
     }
 }
