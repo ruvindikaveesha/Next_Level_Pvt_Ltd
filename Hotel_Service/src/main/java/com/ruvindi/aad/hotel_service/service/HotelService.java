@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface HotelService {
 
-    Hotel addHotela(Hotel hotel);
+    Hotel addHotel(Hotel hotel);
 
     List<Hotel> fetchAllHotel();
 

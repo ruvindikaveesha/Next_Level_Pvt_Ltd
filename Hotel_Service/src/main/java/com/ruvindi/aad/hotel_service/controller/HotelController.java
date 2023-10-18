@@ -16,7 +16,7 @@ public class HotelController {
 
     @PostMapping(value = "/add")
     public Response addHotel(@RequestBody Hotel hotel){
-        hotelService.addHotela(hotel);
+        hotelService.addHotel(hotel);
         return new Response("Okay","Done and Added",null);
     }
 
