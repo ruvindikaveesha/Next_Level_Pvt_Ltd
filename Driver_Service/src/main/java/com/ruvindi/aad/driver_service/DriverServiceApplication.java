@@ -1,4 +1,4 @@
-package com.example.driver_service;
+package com.ruvindi.aad.driver_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
