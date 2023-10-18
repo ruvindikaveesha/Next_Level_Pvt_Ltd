@@ -13,20 +13,24 @@ public class VehicleController {
     @Autowired
     private VehicleService vehicleService;
 
-    @PostMapping(value = "/add")
+    @PostMapping(value = "/add_vehicle")
     public Response addVehicle(@RequestBody Vehicle vehicle){
-        vehicleService.addVehicle(vehicle);
-        return new Response("Okay","Added",null);
-
+        return new Response("Ok","Vehicle Added",vehicleService.addVehicle(vehicle));
     }
 
-    @GetMapping(value = "fetch_All_User")
-    public Response fetchAllVehicle(){
-        return new Response("Okay","Done",vehicleService.fetchAllVehicle());}
+    @PutMapping(value = "/update_vehicle")
+    public Response updateVehicle(@RequestBody Vehicle vehicle){
+        return new Response("OK","Vehicle_update",vehicleService.updateVehicle(vehicle));
+    }
 
-    @GetMapping(value = "/chek")
-    public Boolean checkVehicleExists(@RequestParam String regNumber,@RequestParam String brand){
-        return vehicleService.checkExistsVehicle(regNumber,brand);
+    @DeleteMapping(value = "delete_vehicle")
+    public Response deleteVehicle(@RequestParam String regNumber){
+        vehicleService.deleteVehicle(regNumber);
+        return new Response("Ok","Vehicle Deleted",null);
+    }
+    @GetMapping(value = "/category")
+   public Response fetchAllVehicleByCategory(@RequestParam String category){
+      return new Response("Ok","",vehicleService.fetchAllVehicleByCategory(category));
     }
 
 

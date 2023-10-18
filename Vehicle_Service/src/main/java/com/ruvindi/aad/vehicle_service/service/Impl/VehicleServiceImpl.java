@@ -17,19 +17,32 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Override
     public Vehicle addVehicle(Vehicle vehicle) {
-        if(vehicleRepo.existsByRegNumberAndBrand(vehicle.getRegNumber(),vehicle.getBrand())){
-            return vehicleRepo.save(vehicle);
+        if(!vehicleRepo.existsByRegNumber(vehicle.getRegNumber())){
+            throw new RuntimeException("Vehicle Exists");
         }
-        throw new RuntimeException(("Vehicle Already Exists"));
+        return vehicleRepo.save(vehicle);
     }
 
     @Override
-    public List<Vehicle> fetchAllVehicle() {
-        return vehicleRepo.findAll();
+    public Vehicle updateVehicle(Vehicle vehicle) {
+        if(!vehicleRepo.existsByRegNumber(vehicle.getRegNumber())){
+            throw new RuntimeException("Vehicle Does Not Exists");
+        }
+        return vehicleRepo.save(vehicle);
+
     }
 
     @Override
-    public boolean checkExistsVehicle(String regNmuber, String brand) {
-        return vehicleRepo.existsByRegNumberAndBrand(regNmuber,brand);
+    public void deleteVehicle(String regNumber) {
+        if(!vehicleRepo.existsByRegNumber(regNumber)){
+            throw new RuntimeException("Vehicle Does not Exists");
+        }
+        vehicleRepo.deleteByRegNumber(regNumber);
+
+    }
+
+    @Override
+    public List<Vehicle> fetchAllVehicleByCategory(String category) {
+        return vehicleRepo.findByCategory(category);
     }
 }

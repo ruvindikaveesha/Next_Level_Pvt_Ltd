@@ -6,7 +6,9 @@ import java.util.List;
 
 public interface VehicleService {
     Vehicle addVehicle(Vehicle vehicle);
-    List<Vehicle> fetchAllVehicle();
-    boolean checkExistsVehicle(String regNmuber, String brand);
+    Vehicle updateVehicle(Vehicle vehicle);
+    void deleteVehicle(String regNumber);
+    List<Vehicle> fetchAllVehicleByCategory(String category);
+
 
 }
