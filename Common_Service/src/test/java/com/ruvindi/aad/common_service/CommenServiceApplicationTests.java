@@ -1,4 +1,4 @@
-package com.ruvindi.aad.commen_service;
+package com.ruvindi.aad.common_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

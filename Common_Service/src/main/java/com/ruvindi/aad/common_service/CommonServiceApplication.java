@@ -1,13 +1,13 @@
-package com.ruvindi.aad.commen_service;
+package com.ruvindi.aad.common_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CommenServiceApplication {
+public class CommonServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CommenServiceApplication.class, args);
+        SpringApplication.run(CommonServiceApplication.class, args);
     }
 
 }
