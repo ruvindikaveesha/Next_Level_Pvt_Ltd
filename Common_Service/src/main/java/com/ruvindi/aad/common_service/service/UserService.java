@@ -12,11 +12,11 @@ public class UserService {
     private RestTemplate restTemplate;
 
     public Boolean checkLoing(String userName,String password){
-        return restTemplate.getForObject("http://USER-SERVICE/user/check?userName="+ userName +"&password=" + password, Boolean.class)
+        return restTemplate.getForObject("http://USER-SERVICE/user/check?userName="+ userName +"&password=" + password, Boolean.class);
     }
 
     public ResponseEntity<UserDTO> createUser(UserDTO userDTO){
-        return restTemplate.postForEntity("http://USER-SERVICE/user/add",userDTO,UserDTO.class)
+        return restTemplate.postForEntity("http://USER-SERVICE/user/add",userDTO,UserDTO.class);
     }
 
 }
