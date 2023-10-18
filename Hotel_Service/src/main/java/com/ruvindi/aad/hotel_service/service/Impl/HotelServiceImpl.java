@@ -1,19 +1,25 @@
 package com.ruvindi.aad.hotel_service.service.Impl;
 
 import com.ruvindi.aad.hotel_service.entity.Hotel;
+import com.ruvindi.aad.hotel_service.repo.HotelRepo;
 import com.ruvindi.aad.hotel_service.service.HotelService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class HotelServiceImpl implements HotelService {
-
+    @Autowired
+    private HotelRepo hotelRepo;
 
     @Override
     public Hotel addHotel(Hotel hotel) {
-        return null;
+        if (hotelRepo.existsByIdAndName(hotel.getId(), hotel.getName())) {
+            return hotelRepo.save(hotel);
+        }
     }
+
 
     @Override
     public List<Hotel> fetchAllHotel() {

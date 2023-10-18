@@ -5,4 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface HotelRepo extends JpaRepository<Hotel,Integer> {
 
+    boolean existsByIdAndName(Integer id, String name);
 }
