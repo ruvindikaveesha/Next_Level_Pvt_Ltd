@@ -1,4 +1,4 @@
-package com.ruvindi.aad.common_service.dto;
+package com.ruvindi.aad.api.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

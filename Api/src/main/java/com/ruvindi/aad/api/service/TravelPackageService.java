@@ -1,4 +1,4 @@
-package com.ruvindi.aad.common_service.service;
+package com.ruvindi.aad.api.service;
 
 import com.ruvindi.aad.common_service.dto.TravelPackageDTO;
 import org.springframework.beans.factory.annotation.Autowired;

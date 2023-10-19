@@ -1,4 +1,4 @@
-package com.ruvindi.aad.common_service.controller;
+package com.ruvindi.aad.api.controller;
 
 import com.ruvindi.aad.common_service.dto.TravelPackageDTO;
 import com.ruvindi.aad.common_service.dto.UserDTO;

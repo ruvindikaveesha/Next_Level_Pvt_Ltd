@@ -17,31 +17,28 @@ public class UserController {
 
     @PostMapping(value = "/add_user")
     public Response addUser(@RequestBody User user){
-        userService.addUser(user);
-        return new Response("Okay","Added",null);
+        return new Response("Ok","Added",userService.addUser(user));
     }
 
     @PutMapping(value = "/update_user")
     public Response updateUser(@RequestBody User user){
-        userService.updateUser (user);
-        return new Response("Okay","Update",null);
+        return new Response("Ok","Update",userService.updateUser(user));
     }
 
 
     @DeleteMapping(value = "/delete_user")
     public Response deleteUser(@RequestParam Integer id){
         userService.deleteUser(id);
-        return new Response("Okay","Deleted",null);
+        return new Response("Ok","Deleted",null);
     }
 
     @GetMapping(value = "/fetch_users")
     public Response fetchAllUsers(){
-        return new Response("Okay","Done",userService.fetchAllUsers());}
+        return new Response("Ok","",userService.fetchAllUsers());}
 
     @GetMapping(value = "/check")
-    public Response checkLogin(@RequestBody LoginDto LoginDto){
-        userService.checkLogin(LoginDto.getUserName(),LoginDto.getPassword());
-        return new Response("Okay","Badu Thiynwa",null);
+    public Response checkLogin(@RequestBody LoginDto loginDto){
+        return new Response("Ok","Access Granted",userService.checkLogin(loginDto.getUserName(),loginDto.getPassword()));
     }
 
 
