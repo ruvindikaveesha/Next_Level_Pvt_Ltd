@@ -32,7 +32,7 @@ public class HomeController {
 
     @GetMapping("/get_package")
     public List<TravelPackageDTO> getAllPackage(){
-       return travelPackageService.getAllTravelPackage();
+       return travelPackageService.getAllTravelPackages();
     }
 
 

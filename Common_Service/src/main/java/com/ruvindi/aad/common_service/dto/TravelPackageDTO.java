@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class TravelPackageDTO {
     private int id;
-    private String packageCategory;
+    private String packageName;
     private int starRate;
     private String description;
 }
