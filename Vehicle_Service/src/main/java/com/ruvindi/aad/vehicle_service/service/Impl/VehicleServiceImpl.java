@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Transactional
+
 @Service
 public class VehicleServiceImpl implements VehicleService {
     @Autowired
@@ -17,7 +17,7 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Override
     public Vehicle addVehicle(Vehicle vehicle) {
-        if(!vehicleRepo.existsByRegNumber(vehicle.getRegNumber())){
+        if(vehicleRepo.existsByRegNumber(vehicle.getRegNumber())){
             throw new RuntimeException("Vehicle Exists");
         }
         return vehicleRepo.save(vehicle);
@@ -44,5 +44,15 @@ public class VehicleServiceImpl implements VehicleService {
     @Override
     public List<Vehicle> fetchAllVehicleByCategory(String category) {
         return vehicleRepo.findByCategory(category);
+    }
+
+    @Override
+    public List<Vehicle> fetchAllVehicle(){
+        return vehicleRepo.findAll();
+    }
+
+    @Override
+    public Object searchVehicleById(Integer id) {
+        return vehicleRepo.findById(id) ;
     }
 }

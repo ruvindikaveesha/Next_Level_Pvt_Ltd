@@ -26,11 +26,21 @@ public class VehicleController {
     @DeleteMapping(value = "delete_vehicle")
     public Response deleteVehicle(@RequestParam String regNumber){
         vehicleService.deleteVehicle(regNumber);
-        return new Response("Ok","Vehicle Deleted",null);
+        return new Response("OK","Vehicle Deleted",null);
     }
     @GetMapping(value = "/category")
    public Response fetchAllVehicleByCategory(@RequestParam String category){
-      return new Response("Ok","",vehicleService.fetchAllVehicleByCategory(category));
+      return new Response("OK","",vehicleService.fetchAllVehicleByCategory(category));
+    }
+
+    @GetMapping(value = "/fetch_all")
+    public Response fetchAllVehicle(){
+        return new Response("OK","",vehicleService.fetchAllVehicle());
+    }
+
+    @GetMapping(value ="/search_Vehicle")
+    public Response searchVehicle(Integer id){
+        return new Response("Done","Okay",vehicleService.searchVehicleById(id));
     }
 
 

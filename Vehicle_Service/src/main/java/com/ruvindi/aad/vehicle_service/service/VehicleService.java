@@ -9,6 +9,9 @@ public interface VehicleService {
     Vehicle updateVehicle(Vehicle vehicle);
     void deleteVehicle(String regNumber);
     List<Vehicle> fetchAllVehicleByCategory(String category);
+    List<Vehicle>fetchAllVehicle();
+    Object searchVehicleById(Integer id);
+
 
 
 }
