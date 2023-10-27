@@ -17,7 +17,10 @@ public class Driver {
     private  Integer id;
     private String name;
     private String address;
+    private String email;
+    private String nic;
+    private String status;
     private String contactNum;
-    private String drivingLicenseFrontImg;
-    private String drivingLicenseRearImg;
+    private String drivingLicenseImg;
+
 }

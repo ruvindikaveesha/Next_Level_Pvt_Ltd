@@ -42,10 +42,15 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Boolean checkLogin(String userName, String password) {
+    public Object searchUser(Integer id) {
+     return userRepo.findById(id);
+    }
+
+    @Override
+    public User checkLogin(String userName, String password) {
         if (!userRepo.existsByUserName(userName)){
             throw new RuntimeException("User Not Found");
         }
-        return userRepo.existsUserByUserNameAndPassword(userName,password);
+        return userRepo.findByUserNameAndPassword(userName,password);
     }
 }

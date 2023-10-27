@@ -8,7 +8,13 @@ public interface HotelService {
 
     Hotel addHotel(Hotel hotel);
 
+    Hotel updateHotel(Hotel hotel);
+
+    void deleteHotel(Integer hotelId);
+
     List<Hotel> fetchAllHotel();
 
-    boolean checkExistsHotel(Integer hotelId,String name);
+    List<Hotel>findAllByStarRate(Integer starRate);
+
+    Object searchHotel(Integer id);
 }

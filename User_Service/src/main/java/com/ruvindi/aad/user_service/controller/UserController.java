@@ -22,7 +22,7 @@ public class UserController {
 
     @PutMapping(value = "/update_user")
     public Response updateUser(@RequestBody User user){
-        return new Response("Ok","Update",userService.updateUser(user));
+        return new Response("Ok","Updated",userService.updateUser(user));
     }
 
 
@@ -41,5 +41,9 @@ public class UserController {
         return new Response("Ok","Access Granted",userService.checkLogin(loginDto.getUserName(),loginDto.getPassword()));
     }
 
+    @GetMapping(value = "/search_user")
+    public Response searchUser(@RequestParam Integer id){
+        return new Response("Ok","Done",userService.searchUser(id));
+    }
 
 }

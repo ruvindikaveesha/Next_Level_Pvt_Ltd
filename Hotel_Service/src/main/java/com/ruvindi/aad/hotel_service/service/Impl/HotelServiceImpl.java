@@ -15,10 +15,18 @@ public class HotelServiceImpl implements HotelService {
 
     @Override
     public Hotel addHotel(Hotel hotel) {
-        if (hotelRepo.existsByIdAndName(hotel.getId(), hotel.getName())) {
-            return hotelRepo.save(hotel);
-        }
-        throw new RuntimeException("Hotel Already Exists");
+        return hotelRepo.save(hotel);
+    }
+
+    @Override
+    public Hotel updateHotel(Hotel hotel) {
+        return hotelRepo.save(hotel);
+    }
+
+    @Override
+    public void deleteHotel(Integer hotelId) {
+        hotelRepo.deleteById(hotelId);
+
     }
 
 
@@ -28,7 +36,13 @@ public class HotelServiceImpl implements HotelService {
     }
 
     @Override
-    public boolean checkExistsHotel(Integer hotelId, String name) {
-        return hotelRepo.existsByIdAndName(hotelId,name);
+    public List<Hotel> findAllByStarRate(Integer starRate) {
+        return hotelRepo.findAllByStarRate(starRate);
     }
+
+    @Override
+    public Object searchHotel(Integer id) {
+        return hotelRepo.findById(id);
+    }
+
 }
