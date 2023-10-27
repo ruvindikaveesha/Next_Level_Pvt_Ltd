@@ -8,11 +8,11 @@
         <version>3.1.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.next</groupId>
-    <artifactId>user_Service</artifactId>
+    <groupId>com.ruvindi.aad</groupId>
+    <artifactId>payment_Service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>User_Service</name>
-    <description>User_Service</description>
+    <name>Payment_Service</name>
+    <description>Payment_Service</description>
     <properties>
         <java.version>17</java.version>
         <spring-cloud.version>2022.0.4</spring-cloud.version>
