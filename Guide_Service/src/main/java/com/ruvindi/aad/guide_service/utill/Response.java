@@ -1,21 +1,16 @@
-package com.ruvindi.aad.travel_service.util;
-
+package com.ruvindi.aad.guide_service.utill;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-
-
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @ToString
 @Data
 public class Response {
     private String state;
-    private String massage;
-    private String data;
-
-
+    private String message;
+    private Object data;
 }

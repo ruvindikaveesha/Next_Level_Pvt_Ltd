@@ -15,7 +15,9 @@ public class TravelPackage {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    private Integer headCount;
     private String packageCategory;
+    private String packageName;
     private int starRate;
     private String description;
 

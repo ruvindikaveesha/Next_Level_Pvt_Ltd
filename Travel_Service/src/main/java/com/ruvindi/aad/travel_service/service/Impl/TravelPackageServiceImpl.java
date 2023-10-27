@@ -15,7 +15,7 @@ public class TravelPackageServiceImpl implements TravelPackageService {
 
     @Override
     public TravelPackage addTravelPackage(TravelPackage travelPackage) {
-        if (travelPackageRepo.existsByPackageCategory(travelPackage.getPackageCategory())){
+        if (travelPackageRepo.existsByPackageName(travelPackage.getPackageName())) {
             throw new RuntimeException("Package Already Exists");
         }
         return travelPackageRepo.save(travelPackage);
@@ -23,7 +23,7 @@ public class TravelPackageServiceImpl implements TravelPackageService {
 
     @Override
     public TravelPackage updateTravelPackage(TravelPackage travelPackage) {
-        if(!travelPackageRepo.existsById(travelPackage.getId())) {
+        if (!travelPackageRepo.existsById(travelPackage.getId())) {
             throw new RuntimeException("Package Not Found");
         }
         return travelPackageRepo.save(travelPackage);
@@ -31,15 +31,20 @@ public class TravelPackageServiceImpl implements TravelPackageService {
 
     @Override
     public void deletePackage(Integer id) {
-        if (!travelPackageRepo.existsById(id)){
+        if (!travelPackageRepo.existsById(id)) {
             throw new RuntimeException("Package Not Found");
         }
         travelPackageRepo.deleteById(id);
-
     }
 
     @Override
     public List<TravelPackage> fetchAllPackages() {
         return travelPackageRepo.findAll();
     }
+
+    @Override
+    public TravelPackage fetchPackageDetails(Integer id) {
+        return travelPackageRepo.findById(id).get();
+    }
 }
+
