@@ -1,6 +1,7 @@
 package com.next.user_service.service;
 
 import com.next.user_service.entity.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
