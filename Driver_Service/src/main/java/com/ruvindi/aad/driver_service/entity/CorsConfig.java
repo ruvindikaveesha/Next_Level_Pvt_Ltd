@@ -1,4 +1,4 @@
-package com.ruvindi.aad.cloud_getway.config;
+package com.ruvindi.aad.driver_service.entity;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

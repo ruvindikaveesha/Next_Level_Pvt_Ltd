@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Cloud_getway/Cloud_getway.iml" filepath="$PROJECT_DIR$/Cloud_getway/Cloud_getway.iml" />
       <module fileurl="file://$PROJECT_DIR$/Commen_Service/Common_Service.iml" filepath="$PROJECT_DIR$/Commen_Service/Common_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Driver_Service/Driver_Service.iml" filepath="$PROJECT_DIR$/Driver_Service/Driver_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Guide_Service/Guide_Service.iml" filepath="$PROJECT_DIR$/Guide_Service/Guide_Service.iml" />

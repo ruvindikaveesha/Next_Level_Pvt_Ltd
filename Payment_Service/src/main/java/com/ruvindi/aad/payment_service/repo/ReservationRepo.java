@@ -9,6 +9,6 @@ import org.springframework.data.repository.query.Param;
 import java.util.Date;
 
 public interface ReservationRepo extends JpaRepository<Reservation,Integer> {
-    @Query("SELECT rr.reservedDate FROM Reservation rr WHERE rr.reservationId=:reservationId")
+    @Query("SELECT rr.reservedDate FROM Reservation  rr WHERE rr.reservationId=:reservationId")
     Date getReservedDateByReservationId(@Param("reservationId") String reservationId);
 }

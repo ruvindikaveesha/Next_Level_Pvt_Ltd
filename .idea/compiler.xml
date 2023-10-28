@@ -10,7 +10,6 @@
         <module name="Server_Registry" />
         <module name="Guide_Service" />
         <module name="Vehicle_Service" />
-        <module name="Cloud_getway" />
         <module name="Driver_Service" />
         <module name="User_Service" />
         <module name="Next_Level_Pvt_Ltd" />

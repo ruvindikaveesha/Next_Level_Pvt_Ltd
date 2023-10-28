@@ -1,21 +1,21 @@
 package com.ruvindi.aad.payment_service.entity;
 
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
-import org.springframework.data.annotation.Id;
 
 import java.util.Date;
 
-@AllArgsConstructor
-@NoArgsConstructor
+@Entity
 @Data
-@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "reservation_details")
 public class Reservation {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int reservationId;
     private String packageId;
     private String hotelId;
@@ -26,4 +26,5 @@ public class Reservation {
     private String driverId;
     private String guideId;
     private Date reservedDate;
+
 }
