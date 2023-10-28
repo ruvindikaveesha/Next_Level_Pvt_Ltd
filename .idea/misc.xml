@@ -12,7 +12,6 @@
         <option value="$PROJECT_DIR$/Guide_Service/pom.xml" />
         <option value="$PROJECT_DIR$/Payment_Service/pom.xml" />
         <option value="$PROJECT_DIR$/User_Service/pom.xml" />
-        <option value="$PROJECT_DIR$/Server_Registry/pom.xml" />
         <option value="$PROJECT_DIR$/Cloud_Gateway/pom.xml" />
       </list>
     </option>
