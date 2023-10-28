@@ -7,11 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Service_Registry" />
         <module name="Guide_Service" />
         <module name="Vehicle_Service" />
+        <module name="Cloud_getway" />
         <module name="Driver_Service" />
-        <module name="User_Service" />
         <module name="Next_Level_Pvt_Ltd" />
         <module name="Common_Service" />
         <module name="Hotel_Service" />
@@ -21,6 +20,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Api" target="17" />
+      <module name="Cloud_getway" target="17" />
       <module name="Common-Service" target="17" />
       <module name="Common_Service" target="17" />
       <module name="Driver_Service" target="17" />
@@ -37,6 +37,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Api" options="-parameters" />
+      <module name="Cloud_getway" options="-parameters" />
       <module name="Common-Service" options="-parameters" />
       <module name="Common_Service" options="-parameters" />
       <module name="Driver_Service" options="-parameters" />

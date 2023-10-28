@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Cloud_getway/Cloud_getway.iml" filepath="$PROJECT_DIR$/Cloud_getway/Cloud_getway.iml" />
       <module fileurl="file://$PROJECT_DIR$/Commen_Service/Common_Service.iml" filepath="$PROJECT_DIR$/Commen_Service/Common_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Driver_Service/Driver_Service.iml" filepath="$PROJECT_DIR$/Driver_Service/Driver_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Guide_Service/Guide_Service.iml" filepath="$PROJECT_DIR$/Guide_Service/Guide_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hotel_Service/Hotel_Service.iml" filepath="$PROJECT_DIR$/Hotel_Service/Hotel_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Next_Level_Pvt_Ltd.iml" filepath="$PROJECT_DIR$/Next_Level_Pvt_Ltd.iml" />
       <module fileurl="file://$PROJECT_DIR$/Payment_Service/Payment_Service.iml" filepath="$PROJECT_DIR$/Payment_Service/Payment_Service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Service_Registry/Service_Registry.iml" filepath="$PROJECT_DIR$/Service_Registry/Service_Registry.iml" />
       <module fileurl="file://$PROJECT_DIR$/Travel_Service/Travel_Service.iml" filepath="$PROJECT_DIR$/Travel_Service/Travel_Service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/User_Service/User_Service.iml" filepath="$PROJECT_DIR$/User_Service/User_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Vehicle_Service/Vehicle_Service.iml" filepath="$PROJECT_DIR$/Vehicle_Service/Vehicle_Service.iml" />
     </modules>
   </component>
