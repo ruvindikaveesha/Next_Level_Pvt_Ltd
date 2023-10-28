@@ -7,13 +7,13 @@ import java.util.List;
 public interface UserService {
     User addUser(User user);
 
-    User update(User user);
+    User updateUser(User user);
 
     void deleteUser(Integer id);
 
     List<User> fetchAllUsers();
 
-    User chekLogin(String userName,String password);
+    User checkLogin(String userName,String password);
 
     Object searchUser(Integer id);
 }
