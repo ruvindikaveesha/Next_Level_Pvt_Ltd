@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Service_Registry" />
         <module name="Guide_Service" />
         <module name="Vehicle_Service" />
         <module name="Driver_Service" />
