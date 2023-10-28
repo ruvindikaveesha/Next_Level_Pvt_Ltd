@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/Guide_Service/pom.xml" />
         <option value="$PROJECT_DIR$/Payment_Service/pom.xml" />
         <option value="$PROJECT_DIR$/Cloud_getway/pom.xml" />
+        <option value="$PROJECT_DIR$/User_Service/pom.xml" />
       </list>
     </option>
   </component>

@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/Next_Level_Pvt_Ltd.iml" filepath="$PROJECT_DIR$/Next_Level_Pvt_Ltd.iml" />
       <module fileurl="file://$PROJECT_DIR$/Payment_Service/Payment_Service.iml" filepath="$PROJECT_DIR$/Payment_Service/Payment_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Travel_Service/Travel_Service.iml" filepath="$PROJECT_DIR$/Travel_Service/Travel_Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/User_Service/User_Service.iml" filepath="$PROJECT_DIR$/User_Service/User_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Vehicle_Service/Vehicle_Service.iml" filepath="$PROJECT_DIR$/Vehicle_Service/Vehicle_Service.iml" />
     </modules>
   </component>
