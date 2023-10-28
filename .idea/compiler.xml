@@ -16,11 +16,13 @@
         <module name="Common_Service" />
         <module name="Hotel_Service" />
         <module name="Travel_Service" />
+        <module name="Cloud_Gateway" />
         <module name="Payment_Service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Api" target="17" />
+      <module name="Cloud_Gateway" target="17" />
       <module name="Cloud_getway" target="17" />
       <module name="Common-Service" target="17" />
       <module name="Common_Service" target="17" />
@@ -39,6 +41,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Api" options="-parameters" />
+      <module name="Cloud_Gateway" options="-parameters" />
       <module name="Cloud_getway" options="-parameters" />
       <module name="Common-Service" options="-parameters" />
       <module name="Common_Service" options="-parameters" />

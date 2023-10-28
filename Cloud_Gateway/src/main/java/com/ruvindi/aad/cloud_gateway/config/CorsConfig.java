@@ -1,4 +1,4 @@
-package com.ruvindi.aad.driver_service.entity;
+package com.ruvindi.aad.cloud_gateway.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
