@@ -14,18 +14,18 @@ public class GuideController {
     private GuideService guideService;
 
 
-    @PostMapping(value = "/save_guide")
-    public void saveGuide(@ModelAttribute Guide guide){
-        guideService.addGuide(guide);
-    }
+    @PostMapping(value = "/add_guide")
+    public Response addGuide(@ModelAttribute Guide guide){
+        return new Response("OK","Guide Added",guideService.addGuide(guide));
 
+    }
     @PutMapping(value = "/update_guide")
     public Response updateGuide(@RequestBody Guide guide){
         return new Response("OK","Guide Updated",guideService.updateGuide(guide));
     }
 
     @DeleteMapping(value = "/del_guide")
-    public Response deleteGuide(@RequestParam Integer guideId){
+    public Response deleteGuide(@RequestParam String guideId){
         guideService.deleteGuide(guideId);
         return new Response("OK","Guide Deleted",null);
     }

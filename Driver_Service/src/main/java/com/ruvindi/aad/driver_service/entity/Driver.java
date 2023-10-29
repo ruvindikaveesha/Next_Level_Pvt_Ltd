@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Data
-@Table(name = "driver_details")
+@Table(name ="driver_details")
 public class Driver {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
