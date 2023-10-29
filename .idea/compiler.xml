@@ -7,7 +7,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Service_Registry" />
         <module name="Guide_Service" />
         <module name="Vehicle_Service" />
         <module name="Driver_Service" />
@@ -18,6 +17,15 @@
         <module name="Travel_Service" />
         <module name="Cloud_Gateway" />
         <module name="Payment_Service" />
+      </profile>
+      <profile name="Annotation profile for Service_Registry" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-netflix-eureka-server/latest/spring-cloud-starter-netflix-eureka-server-latest.jar" />
+        </processorPath>
+        <module name="Service_Registry" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,7 +40,7 @@
       <module name="Next_Level_Pvt_Ltd" target="17" />
       <module name="Payment_Service" target="17" />
       <module name="Server_Registry" target="17" />
-      <module name="Service_Registry" target="17" />
+      <module name="Service_Registry" target="1.8" />
       <module name="Travel_Service" target="17" />
       <module name="User_Service" target="17" />
       <module name="Vehicle_Service" target="17" />

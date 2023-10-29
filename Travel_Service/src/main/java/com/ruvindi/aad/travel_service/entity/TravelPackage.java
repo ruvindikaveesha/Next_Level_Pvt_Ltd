@@ -1,9 +1,7 @@
 package com.ruvindi.aad.travel_service.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,7 +16,7 @@ public class TravelPackage {
     private Integer headCount;
     private String packageCategory;
     private String packageName;
-    private int starRate;
+    private Integer starRate;
     private String description;
 
 
