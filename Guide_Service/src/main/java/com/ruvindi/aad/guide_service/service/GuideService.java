@@ -16,7 +16,8 @@ public interface GuideService {
 
     void setUnavailableGuide(String id);
 
+    List<Guide> getAllGuide();
+
     Guide getGuideById(String id);
 
-    List<Guide> getAllGuide();
 }

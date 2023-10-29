@@ -8,7 +8,9 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import java.util.List;
 
 @EnableMongoRepositories
-public interface GuideRepo extends MongoRepository<Guide,Integer> {
+public interface GuideRepo extends MongoRepository<Guide,String> {
    @Query("{'status':'Available'}")
     List<Guide>findAllByStatus();
+
+
 }

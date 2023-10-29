@@ -3,7 +3,6 @@ package com.ruvindi.aad.guide_service.service.impl;
 import com.ruvindi.aad.guide_service.entity.Guide;
 import com.ruvindi.aad.guide_service.repo.GuideRepo;
 import com.ruvindi.aad.guide_service.service.GuideService;
-import lombok.ToString;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,9 +27,8 @@ public class GuideServiceImpl implements GuideService {
     }
 
     @Override
-    public void deleteGuide(String guideId) {guideRepo.deleteById(guideId);
-
-    }
+    public void deleteGuide(String guideId) {
+        guideRepo.deleteById(guideId);}
 
     @Override
     public Guide getAvailableGuide() {
@@ -51,13 +49,15 @@ public class GuideServiceImpl implements GuideService {
     }
 
     @Override
+    public List<Guide> getAllGuide() {return guideRepo.findAll();
+    }
+
+
+    @Override
     public Guide getGuideById(String id) {
         return guideRepo.findById(id).get();
     }
 
-    @Override
-    public List<Guide> getAllGuide() {return guideRepo.findAll();
-    }
 }
 
 
