@@ -10,9 +10,13 @@ public interface GuideService {
 
     Guide updateGuide(Guide guide);
 
-    void deleteGuide(Integer guide);
+    void deleteGuide(String guideId);
 
     Guide getAvailableGuide();
+
+    void setUnavailableGuide(String id);
+
+    Guide getGuideById(String id);
 
     List<Guide> getAllGuide();
 }
