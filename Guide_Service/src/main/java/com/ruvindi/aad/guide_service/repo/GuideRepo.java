@@ -5,8 +5,10 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
+import java.util.List;
+
 @EnableMongoRepositories
 public interface GuideRepo extends MongoRepository<Guide,Integer> {
-    @Query("SELECT guide FROM Guide guide WHERE guide.status='Available'")
-    Guide findFirstAvailableGuide();
+   @Query("{'status':'Available'}")
+    List<Guide>findAllByStatus();
 }

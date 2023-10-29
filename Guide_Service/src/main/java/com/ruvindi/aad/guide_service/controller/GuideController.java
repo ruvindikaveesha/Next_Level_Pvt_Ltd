@@ -15,30 +15,41 @@ public class GuideController {
 
 
     @PostMapping(value = "/add_guide")
-    public Response addGuide(@ModelAttribute Guide guide){
-        return new Response("OK","Guide Added",guideService.addGuide(guide));
+    public Response addGuide(@ModelAttribute Guide guide) {
+        return new Response("OK", "Guide Added", guideService.addGuide(guide));
 
     }
+
     @PutMapping(value = "/update_guide")
-    public Response updateGuide(@RequestBody Guide guide){
-        return new Response("OK","Guide Updated",guideService.updateGuide(guide));
+    public Response updateGuide(@RequestBody Guide guide) {
+        return new Response("OK", "Guide Updated", guideService.updateGuide(guide));
     }
 
     @DeleteMapping(value = "/del_guide")
-    public Response deleteGuide(@RequestParam String guideId){
+    public Response deleteGuide(@RequestParam String guideId) {
         guideService.deleteGuide(guideId);
-        return new Response("OK","Guide Deleted",null);
+        return new Response("OK", "Guide Deleted", null);
     }
 
     @GetMapping(value = "/available")
-    public Response getAvailableGuide(){
-        return new Response("OK","",guideService.getAvailableGuide());
+    public Response getAvailableGuide() {
+        return new Response("OK", "", guideService.getAvailableGuide());
+    }
+
+    @PutMapping(value = "/unavailable")
+    public Response setUnavailableGuide(@RequestParam String id) {
+        guideService.setUnavailableGuide(id);
+        return new Response("OK", "", null);
     }
 
     @GetMapping(value = "/getGuide")
-    public Response getGuide(){
-        return new Response("Okay","Done",guideService.getAllGuide());
+    public Response getGuide() {
+        return new Response("OK", "Done", guideService.getAllGuide());
+    }
+
+    @GetMapping(value = "/get")
+    public Response getGuideById(@RequestParam String id) {
+        return new Response("OK", "Done", guideService.getGuideById(id));
     }
 }
-
 
