@@ -1,6 +1,7 @@
 package com.ruvindi.aad.travel_service.util;
 
 
+import com.ruvindi.aad.travel_service.entity.TravelPackage;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,4 +19,6 @@ public class Response {
     private String data;
 
 
+    public Response(String okay, String done, TravelPackage fetchPackageDetails) {
+    }
 }

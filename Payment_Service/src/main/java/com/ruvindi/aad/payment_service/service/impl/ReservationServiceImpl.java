@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 @Transactional
@@ -35,5 +36,10 @@ public class ReservationServiceImpl implements ReservationService {
     @Override
     public Date getReservedDate(String reservationId) {
         return reservationRepo.getReservedDateByReservationId(reservationId);
+    }
+
+    @Override
+    public List<Reservation> getAll(String id) {
+        return null;
     }
 }

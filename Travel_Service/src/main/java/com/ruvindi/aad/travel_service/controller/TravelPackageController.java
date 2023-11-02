@@ -27,12 +27,12 @@ public class TravelPackageController {
     @DeleteMapping(value = "/delete_package")
     public Response deletePackage(@RequestParam Integer id) {
         travelPackageService.deletePackage(id);
-        return new Response("Okay", "Deleted", null);
+        return new Response("Okay", "Deleted", (TravelPackage) null);
     }
 
     @GetMapping(value = "/get_packages")
     public Response fetchAllPackages() {
-        return new Response("Okay", "Done", travelPackageService.fetchAllPackages());
+        return new Response("Okay", "Done", (TravelPackage) travelPackageService.fetchAllPackages());
     }
 
     @GetMapping(value = "/get_package")

@@ -48,4 +48,9 @@ public class ReservationController {
         }
         return false;
     }
+
+    @GetMapping(value = "/getAll")
+    public Response getAll(String id){
+        return new Response(HttpStatus.OK,"Done",reservationService.getAll(id));
+    }
 }
